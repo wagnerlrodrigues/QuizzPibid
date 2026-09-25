@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>QuizFeira — IA & Meio Ambiente</title>
+<title>Quizzes </title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -547,10 +547,10 @@
   .opt-btn:active:not(:disabled) { transform: translateY(0); }
   .opt-btn:disabled { cursor: default; }
   .opt-btn .opt-shape { font-size: 1.3rem; flex-shrink: 0; }
-  .opt-0 { background: var(--c-signal); }
-  .opt-1 { background: var(--c-growth); }
-  .opt-2 { background: var(--c-spark); color: #3a2000; }
-  .opt-3 { background: #E85A9A; }
+  .opt-0 { background: #57b0fa; }
+  .opt-1 { background: #57b0fa; }
+  .opt-2 { background: #57b0fa; }
+  .opt-3 { background: #57b0fa; }
   .opt-btn.faded { opacity: 0.35; filter: grayscale(0.3); }
   .opt-btn.correct-reveal { outline: 4px solid #1FDB6B; outline-offset: 2px; }
   .opt-btn.wrong-reveal { outline: 4px solid var(--c-danger); outline-offset: 2px; animation: shake .35s ease; }
@@ -738,7 +738,7 @@
   <header class="topbar">
     <button class="wordmark" onclick="App.goDashboard()" aria-label="Ir para o início">
       <span class="badge">🌱</span>
-      <span>QuizFeira</span>
+      <span>Quizzes Pibid</span>
     </button>
     <div class="topbar-actions">
       <button class="icon-btn" id="btn-sound" title="Som" onclick="App.toggleSound()"></button>
@@ -1143,7 +1143,7 @@ function renderDashboard(){
       '<h3>'+esc(q.title)+'</h3>' +
       '<div class="qtheme">'+esc(q.theme||'')+'</div>' +
       '<div class="qmeta">' +
-        (results.length ? '<span>👥 '+results.length+' participação'+(results.length===1?'':'ões')+'</span>' : '<span>Nenhuma participação ainda</span>') +
+        (results.length ? '<span>👥 '+results.length+' participaç'+(results.length===1?'':'ões')+'</span>' : '<span>Nenhuma participação ainda</span>') +
         (best ? '<span>🏆 recorde '+best+' pts</span>' : '') +
       '</div>' +
       '<div class="qactions">' +
@@ -1159,9 +1159,8 @@ function renderDashboard(){
 
   viewEl.innerHTML =
     '<div class="hero">' +
-      '<span class="eyebrow-tag">🔬 Feira de Ciências</span>' +
+      '<span class="eyebrow-tag">🔬 Pibid | IFPI - Licencietura em Computação</span>' +
       '<h1 style="margin-top:10px;">Quizzes sobre IA & Meio Ambiente</h1>' +
-      '<p>Crie perguntas, sorteie a ordem, cronometre as respostas e acompanhe o ranking dos participantes — tudo funciona neste dispositivo, mesmo sem internet.</p>' +
       '<div class="btn-row">' +
         '<button class="btn btn-primary" onclick="App.newQuiz()">✨ Criar novo quiz</button>' +
         '<button class="btn btn-ghost" onclick="App.openImportNew()">📥 Importar de um CSV</button>' +
@@ -1783,7 +1782,7 @@ App.openSettings = function(){
   var totalResults = Object.values(state.results).reduce(function(s,arr){ return s+arr.length; }, 0);
   var box = openModal(
     '<h3>Backup e dados</h3>' +
-    '<p class="modal-msg">'+totalQuizzes+' quiz(zes) e '+totalResults+' participação(ões) salvas neste dispositivo.</p>' +
+    '<p class="modal-msg">'+totalQuizzes+' quiz(zes) e '+totalResults+' participaç(ões) salvas neste dispositivo.</p>' +
     '<div class="btn-row">' +
       '<button class="btn btn-soft btn-sm" id="bk-export">⬇️ Exportar backup completo (.json)</button>' +
       '<button class="btn btn-ghost btn-sm" id="bk-import">📥 Restaurar backup</button>' +
